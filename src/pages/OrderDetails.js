@@ -41,7 +41,7 @@ function OrderDetails() {
         </div>
       </div>
       <hr />
-      {/* <p className="text-xl font-medium">Recommended Products</p> */}
+      <p className="text-xl font-medium flex justify-center items-center pt-4">Recommended Products</p>
       <div className="grid sm:px-10 lg:grid-cols-4 lg:px-20 xl:px-16">
         {campaign &&
           campaign.productRecommendations.map((recommendedProduct) => (
