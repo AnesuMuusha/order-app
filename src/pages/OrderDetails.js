@@ -30,9 +30,9 @@ function OrderDetails() {
 
   return (
     <>
-      <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
+      <div className="grid sm:px-10 lg:grid lg:px-20 xl:px-32">
         <div className="px-4 pt-8">
-          <p className="text-xl font-medium">Your Order</p>
+          <p className="text-xl font-medium flex justify-center items-center ">Your Order: Items</p>
           <OrderDetailsSection order={order} />
         </div>
 
@@ -42,7 +42,7 @@ function OrderDetails() {
       </div>
       <hr />
       <p className="text-xl font-medium flex justify-center items-center pt-4">Recommended Products</p>
-      <div className="grid sm:px-10 lg:grid-cols-4 lg:px-20 xl:px-16">
+      <div className="grid sm:px-10 lg:grid-cols-4 md:grid-cols-3 lg:px-20 xl:px-16">
         {campaign &&
           campaign.productRecommendations.map((recommendedProduct) => (
             <RecommendedProduct
@@ -66,10 +66,10 @@ const CustomerDetails = ({ customer }) => {
           </p>
           <p>Email: {customer.email}</p>
 
-          <p className="text-xl font-medium text-black mt-4 ">
+          <p className="text-xl font-medium text-black mt-4">
             Shipping Details
           </p>
-          <p>Address: {formatShippingAddress(customer.shippingAddress)}</p>
+          <p className=" pb-6">Address: {formatShippingAddress(customer.shippingAddress)}</p>
         </>
       )}
     </div>
@@ -87,7 +87,6 @@ const OrderDetailsSection = ({ order }) => {
     <div>
       {order && (
         <>
-          <span>Items</span>
           {order.products.map((product, index) => (
             <Product product={product} key={index} />
           ))}
