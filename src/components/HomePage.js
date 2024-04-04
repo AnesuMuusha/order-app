@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../images/image.jpg';
-import OrderDetails from './OrderDetails';
+import OrderDetails from '../pages/OrderDetails';
 function HomePage() {
   return (
         <div>
@@ -31,6 +31,3 @@ function HomePage() {
     }
 
 export default HomePage;
-
-
-
